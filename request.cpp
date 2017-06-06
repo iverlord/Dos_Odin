@@ -10,11 +10,11 @@ void Request::request()
 {
     QNetworkAccessManager manager;
     QEventLoop loop;
-    QNetworkRequest request(QUrl("http://stats.df.wtf/api/v1/poll1"));
+    QNetworkRequest request(QUrl("http://stats.df.wtf/api/v1/poll"));
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     QJsonObject json;
-    json.insert("email","ilya1997@inbox.ru");
-    json.insert("language",5);
+    json.insert("email", "ilya1997@inbox.ru");
+    json.insert("language", 5);
     QJsonDocument data;
     data.setObject(json);
     QNetworkReply *reply;
